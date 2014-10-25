@@ -25,7 +25,14 @@
   "keywords": [
     "compute.io",
     "compute",
-    "computation"
+    "computation",
+    "statistics",
+    "stats",
+    "mathematics",
+    "math",
+    "max",
+    "maximum",
+    "incremental"
   ],
   "bugs": {
     "url": "https://github.com/compute-io/incrmax/issues"

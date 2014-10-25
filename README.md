@@ -19,14 +19,50 @@ For use in the browser, use [browserify](https://github.com/substack/node-browse
 To use the module,
 
 ``` javascript
-var lib = require( 'compute-incrmax' );
+var incrmax = require( 'compute-incrmax' );
 ```
+
+#### incrmax()
+
+Returns an initialized method to compute a maximum value incrementally.
+
+``` javascript
+var max = incrmax();
+```
+
+#### max( [value] )
+
+If provided a `value`, the method updates and returns the updated max. If not provided a `value`, the method returns the current max.
+
+``` javascript
+max( 2 );
+
+console.log( max( 1 ) );
+// returns 2
+
+max( 3 );
+
+console.log( max() );
+// returns 3
+```
+
+Note: if values have not yet been provided to `max()`, `max()` returns `null`.
 
 
 ## Examples
 
 ``` javascript
-var lib = require( 'compute-incrmax' );
+var incrmax = require( 'compute-incrmax' );
+
+// Initialize a method to calculate the max incrementally:
+var max = incrmax();
+
+// Simulate some data...
+for ( var i = 0; i < 1000; i++ ) {
+	max( Math.random() * 100 );
+}
+
+console.log( max() );
 ```
 
 To run the example code from the top-level application directory,
@@ -34,6 +70,10 @@ To run the example code from the top-level application directory,
 ``` bash
 $ node ./examples/index.js
 ```
+
+## Notes
+
+The use case for this module differs from the conventional [vector](https://github.com/compute-io/max) implementation and the [stream](https://github.com/flow-io/?query=max) implementation. Namely, this module decouples the act of updating the max from the act of consuming the max.
 
 
 ## Tests
