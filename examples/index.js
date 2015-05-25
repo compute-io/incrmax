@@ -1,3 +1,5 @@
+'use strict';
+
 var incrmax = require( './../lib' );
 
 // Initialize a method to calculate the maximum value incrementally:
