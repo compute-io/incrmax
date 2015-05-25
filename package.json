@@ -1,6 +1,6 @@
 {
   "name": "compute-incrmax",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Provides a method to compute a maximum value incrementally.",
   "author": {
     "name": "Athan Reines",
@@ -50,5 +50,5 @@
     "jshint": "2.x.x",
     "jshint-stylish": "^1.0.0"
   },
-  "license":"MIT"
+  "license": "MIT"
 }
