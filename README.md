@@ -16,7 +16,6 @@ For use in the browser, use [browserify](https://github.com/substack/node-browse
 
 ## Usage
 
-
 ``` javascript
 var incrmax = require( 'compute-incrmax' );
 ```
